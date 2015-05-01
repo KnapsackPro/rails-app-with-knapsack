@@ -1,0 +1,7 @@
+{
+  "test/controllers/welcome_controller_test.rb": 0.23563027381896973,
+  "test/models/article_test.rb": 3.695487976074219e-05,
+  "test/controllers/articles_controller_test.rb": 0.10875535011291504,
+  "test/minitest/meme_unit_test.rb": 0.00027823448181152344,
+  "test/minitest/meme_spec_test.rb": 7.987022399902344e-05
+}
