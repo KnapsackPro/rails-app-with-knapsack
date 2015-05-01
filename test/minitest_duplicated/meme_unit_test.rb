@@ -1,13 +1,14 @@
 require 'test_helper'
 
-# This test never run because it will be override by test/minitest_duplicated/meme_unit_test.rb
+# This test is a duplicated test of test/minitest/meme_unit_test.rb
+# It will override the origin test and only this duplicated test will run
 class TestMeme < Minitest::Test
   def setup
     @meme = Meme.new
   end
 
   def test_that_kitty_can_eat
-    puts 'Meme first test with minitest syntax'
+    puts 'Meme duplicated second test with minitest syntax'
     assert_equal "OHAI!", @meme.i_can_has_cheezburger?
   end
 
