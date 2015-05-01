@@ -1,5 +1,7 @@
 # Rails app with knapsack
 
+[![Circle CI](https://circleci.com/gh/KnapsackPro/rails-app-with-knapsack.svg)](https://circleci.com/gh/KnapsackPro/rails-app-with-knapsack)
+
 This is example Ruby on Rails app with knapsack gem.
 
 You can read more about free knapsack gem here:
