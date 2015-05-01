@@ -1,10 +1,11 @@
 machine:
   environment:
     KNAPSACK_REPO_PATH: ~/gems/knapsack
-test:
+dependencies:
   pre:
     - mkdir ~/gems
     - cd ~/gems && git clone -b minitest-adapter --single-branch git@github.com:ArturT/knapsack.git minitest-adapter
+test:
   override:
     #- KNAPSACK_GENERATE_REPORT=true bundle exec rake test
     - bundle exec rake knapsack:minitest[--verbose]:
