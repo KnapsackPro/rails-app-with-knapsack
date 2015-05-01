@@ -1,4 +1,6 @@
 machine:
+  ruby:
+    version: 2.2.2
   environment:
     KNAPSACK_REPO_PATH: ~/gems/knapsack
 dependencies:
