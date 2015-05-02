@@ -6,7 +6,7 @@ machine:
 dependencies:
   pre:
     - mkdir ~/gems
-    - cd ~/gems && git clone -b minitest-adapter --single-branch git@github.com:ArturT/knapsack.git
+    - cd ~/gems && git clone -b $CIRCLE_BRANCH --single-branch git@github.com:ArturT/knapsack.git
 test:
   override:
     #- KNAPSACK_GENERATE_REPORT=true bundle exec rake test
