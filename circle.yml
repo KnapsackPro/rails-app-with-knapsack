@@ -7,6 +7,8 @@ dependencies:
   pre:
     - mkdir ~/gems
     - cd ~/gems && git clone -b $CIRCLE_BRANCH --single-branch git@github.com:ArturT/knapsack.git
+    - cd ~/gems && git branch
+    - cd ~/gems && git log -n 1
 test:
   override:
     #- KNAPSACK_GENERATE_REPORT=true bundle exec rake test
