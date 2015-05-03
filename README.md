@@ -2,7 +2,7 @@
 
 [![Circle CI](https://circleci.com/gh/KnapsackPro/rails-app-with-knapsack.svg)](https://circleci.com/gh/KnapsackPro/rails-app-with-knapsack)
 
-This is example Ruby on Rails app with knapsack gem.
+This is example Ruby on Rails app with knapsack gem. Knapsack splits tests across CI nodes and makes sure that tests will run comparable time on each node.
 
 __You can read more about free [knapsack gem here](https://github.com/ArturT/knapsack). You will find there info how to set up your test suite and how to do it on your favorite CI server.__
 
