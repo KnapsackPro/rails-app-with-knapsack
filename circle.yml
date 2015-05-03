@@ -11,6 +11,10 @@ dependencies:
     - cd ~/gems/knapsack && git log -n 1
 test:
   override:
+    #- KNAPSACK_GENERATE_REPORT=true bundle exec rspec spec
+    - bundle exec rake knapsack:rspec:
+        parallel: true
+
     #- KNAPSACK_GENERATE_REPORT=true bundle exec rake test
     - bundle exec rake knapsack:minitest[--verbose]:
         parallel: true
