@@ -6,7 +6,15 @@ This is example Ruby on Rails app with knapsack gem. Knapsack splits tests acros
 
 __You can read more about free [knapsack gem here](https://github.com/ArturT/knapsack). You will find there info how to set up your test suite and how to do it on your favorite CI server.__
 
+## How to load knapsack rake tasks
+
+See [Rakefile](Rakefile).
+
 ## Parallel minitest test suite with knapsack
+
+### How to set up knapsack
+
+See [test/test_helper.rb](test/test_helper.rb)
 
 ### Step 1
 
@@ -29,6 +37,10 @@ You can use below command on CI to run tests:
 See [circle.yml](circle.yml) to see how we set up CircleCI.
 
 ## Parallel rspec test suite with knapsack
+
+### How to set up knapsack
+
+See [spec/spec_helper.rb](spec/spec_helper.rb)
 
 ### Step 1
 
