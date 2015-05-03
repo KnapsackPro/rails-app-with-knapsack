@@ -15,6 +15,10 @@ test:
     - bundle exec rake knapsack:rspec:
         parallel: true
 
+    #- KNAPSACK_GENERATE_REPORT=true bundle exec cucumber features
+    - bundle exec rake knapsack:cucumber:
+        parallel: true
+
     #- KNAPSACK_GENERATE_REPORT=true bundle exec rake test
     - bundle exec rake knapsack:minitest[--verbose]:
         parallel: true
