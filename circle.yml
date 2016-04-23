@@ -5,6 +5,10 @@ machine:
     KNAPSACK_REPO_PATH: ~/gems/knapsack
 dependencies:
   pre:
+    # fix bug: https://discuss.circleci.com/t/bundler-fails-to-find-appropriate-version-despite-installing-appropriate-version-earlier-in-the-build/2815/36
+    - echo "export rvm_ignore_gemsets_flag=1" >> ~/.rvmrc
+    - gem install bundler
+
     - mkdir ~/gems
     - cd ~/gems && git clone -b $CIRCLE_BRANCH --single-branch git@github.com:ArturT/knapsack.git
     - cd ~/gems/knapsack && git branch
