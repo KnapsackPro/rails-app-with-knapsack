@@ -91,3 +91,30 @@ You can use below command on CI to run tests:
     $ CI_NODE_TOTAL=2 CI_NODE_INDEX=1 bundle exec rake knapsack:minitest
 
 See [circle.yml](circle.yml) to see how we set up CircleCI.
+
+
+## Parallel spinach test suite with knapsack
+
+### How to set up knapsack
+
+See [spinach_features/support/env.rb](spinach_features/support/env.rb)
+
+### Step 1
+
+First generate only once a report `knapsack_spinach_report.json` on your CI with command:
+
+    $ KNAPSACK_GENERATE_REPORT=true bundle exec spinach -f spinach_features
+
+Add the report into your repository and commit.
+
+### Step 2
+
+You can use below command on CI to run tests:
+
+    # Run this on first CI server
+    $ CI_NODE_TOTAL=2 CI_NODE_INDEX=0 KNAPSACK_TEST_FILE_PATTERN="spinach_features/**{,/*/**}/*.feature" bundle exec rake "knapsack:spinach[-f spinach_features]"
+
+    # Run this on second CI server
+    $ CI_NODE_TOTAL=2 CI_NODE_INDEX=1 KNAPSACK_TEST_FILE_PATTERN="spinach_features/**{,/*/**}/*.feature" bundle exec rake "knapsack:spinach[-f spinach_features]"
+
+See [circle.yml](circle.yml) to see how we set up CircleCI.
