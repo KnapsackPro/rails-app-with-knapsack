@@ -6,7 +6,7 @@ machine:
 dependencies:
   pre:
     - mkdir ~/gems
-    - cd ~/gems && git clone -b $CIRCLE_BRANCH --single-branch git@github.com:ArturT/knapsack.git
+    - cd ~/gems && git clone -b master --single-branch git@github.com:ArturT/knapsack.git
     - cd ~/gems/knapsack && git branch
     - cd ~/gems/knapsack && git log -n 1 | more
 test:
