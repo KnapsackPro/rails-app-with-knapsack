@@ -24,5 +24,5 @@ test:
         parallel: true
 
     # KNAPSACK_GENERATE_REPORT=true bundle exec spinach -f spinach_features
-    - KNAPSACK_TEST_FILE_PATTERN="spinach_features/**{,/*/**}/*.feature" bundle exec rake "knapsack:spinach[-f spinach_features]":
+    - KNAPSACK_TEST_FILE_PATTERN="spinach_features/**{,/*/**}/*.feature" bundle exec rake knapsack:spinach:
         parallel: true
