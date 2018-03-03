@@ -1,0 +1,57 @@
+# Ruby CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-ruby/ for more details
+#
+version: 2
+jobs:
+  build:
+    parallelism: 2
+    docker:
+      # specify the version you desire here
+      - image: circleci/ruby:2.5.0-node-browsers
+        environment:
+          RAILS_ENV: test
+          KNAPSACK_REPO_PATH: ~/gems/knapsack
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - run: mkdir ~/gems
+      - run: cd ~/gems && (git clone -b $CIRCLE_BRANCH --single-branch git@github.com:ArturT/knapsack.git || git clone -b master --single-branch git@github.com:ArturT/knapsack.git)
+      - run: cd ~/gems/knapsack && git branch
+      - run: cd ~/gems/knapsack && git log -n 1 | more
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v2-dependencies-bundler-{{ checksum "Gemfile.lock" }}-{{ checksum ".ruby-version" }}
+          # fallback to using the latest cache if no exact match is found
+          - v2-dependencies-bundler-
+
+      - run:
+          name: install ruby dependencies
+          command: |
+            bundle install --jobs=4 --retry=3 --path vendor/bundle
+
+      - save_cache:
+          paths:
+            - ./vendor/bundle
+          key: v2-dependencies-bundler-{{ checksum "Gemfile.lock" }}-{{ checksum ".ruby-version" }}
+
+      # Database setup
+      - run: rake db:setup
+
+      # run tests!
+      #- run: KNAPSACK_GENERATE_REPORT=true bundle exec rspec spec
+      - run: bundle exec rake knapsack:rspec
+
+      #- run: KNAPSACK_GENERATE_REPORT=true bundle exec cucumber features
+      - run: bundle exec rake knapsack:cucumber
+
+      #- run: KNAPSACK_GENERATE_REPORT=true bundle exec rake knapsack:minitest
+      - run: bundle exec rake knapsack:minitest[--verbose]
+
+      #- run: KNAPSACK_GENERATE_REPORT=true bundle exec spinach -f spinach_features
+      - run: KNAPSACK_TEST_FILE_PATTERN="spinach_features/**{,/*/**}/*.feature" bundle exec rake knapsack:spinach
