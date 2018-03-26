@@ -36,7 +36,7 @@ You can use below command on CI to run tests:
     # Run this on second CI server
     $ CI_NODE_TOTAL=2 CI_NODE_INDEX=1 bundle exec rake knapsack:rspec
 
-See [circle.yml](circle.yml) to see how we set up CircleCI.
+See [circle.yml](.circleci/config.yml) to see how we set up CircleCI.
 
 
 ## Parallel cucumber test suite with knapsack
@@ -63,7 +63,7 @@ You can use below command on CI to run tests:
     # Run this on second CI server
     $ CI_NODE_TOTAL=2 CI_NODE_INDEX=1 bundle exec rake knapsack:cucumber
 
-See [circle.yml](circle.yml) to see how we set up CircleCI.
+See [circle.yml](.circleci/config.yml) to see how we set up CircleCI.
 
 
 ## Parallel minitest test suite with knapsack
@@ -90,7 +90,7 @@ You can use below command on CI to run tests:
     # Run this on second CI server
     $ CI_NODE_TOTAL=2 CI_NODE_INDEX=1 bundle exec rake knapsack:minitest
 
-See [circle.yml](circle.yml) to see how we set up CircleCI.
+See [circle.yml](.circleci/config.yml) to see how we set up CircleCI.
 
 
 ## Parallel spinach test suite with knapsack
@@ -117,4 +117,4 @@ You can use below command on CI to run tests:
     # Run this on second CI server
     $ CI_NODE_TOTAL=2 CI_NODE_INDEX=1 KNAPSACK_TEST_FILE_PATTERN="spinach_features/**{,/*/**}/*.feature" bundle exec rake "knapsack:spinach[-f spinach_features]"
 
-See [circle.yml](circle.yml) to see how we set up CircleCI.
+See [circle.yml](.circleci/config.yml) to see how we set up CircleCI.
