@@ -1,0 +1,3 @@
+CI_NODE_TOTAL=2 \
+  CI_NODE_INDEX=0 \
+  bundle exec rake "knapsack:rspec[-f p]"
