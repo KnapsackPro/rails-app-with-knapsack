@@ -49,7 +49,8 @@ end
 group :test do
   gem 'rspec-rails'
 
-  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails', '1.4.0', :require => false
+  gem 'cucumber', '2.99'
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
 
