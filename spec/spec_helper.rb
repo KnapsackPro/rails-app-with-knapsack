@@ -1,6 +1,9 @@
 require 'knapsack'
 
 # CUSTOM_CONFIG_GOES_HERE
+#Knapsack.tracker.config({
+  #enable_time_offset_warning: false,
+#})
 
 Knapsack::Adapters::RspecAdapter.bind
 
