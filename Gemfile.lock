@@ -1,7 +1,7 @@
 PATH
   remote: ../knapsack
   specs:
-    knapsack (1.18.0)
+    knapsack (1.19.0)
       rake
 
 GEM
@@ -288,4 +288,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.17.2
+   1.17.3
