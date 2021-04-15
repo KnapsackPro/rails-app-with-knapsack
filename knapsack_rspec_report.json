@@ -1,7 +1,8 @@
 {
-  "spec/controllers/articles_controller_spec.rb": 0.05106399999931455,
-  "spec/controllers/welcome_controller_spec.rb": 0.0028039999306201935,
-  "spec/dir with spaces/foobar_spec.rb": 0.0011529996991157532,
-  "spec/services/calculator_spec.rb": 0.0002549998462200165,
-  "spec/services/meme_spec.rb": 0.0001050001010298729
+  "spec/controllers/articles_controller_spec.rb": 0.09140000026673079,
+  "spec/controllers/welcome_controller_spec.rb": 0.006082000210881233,
+  "spec/dir with spaces/foobar_spec.rb": 0.0029360000044107437,
+  "spec/services/calculator_spec.rb": 0.015428999904543161,
+  "spec/services/meme_spec.rb": 0.002743000164628029,
+  "spec/track_context_time_spec.rb": 5.721737999934703
 }
