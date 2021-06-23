@@ -1,7 +1,7 @@
 PATH
   remote: ../knapsack
   specs:
-    knapsack (3.0.0)
+    knapsack (3.1.0)
       rake
 
 GEM
