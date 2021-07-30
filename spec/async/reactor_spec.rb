@@ -1,7 +1,7 @@
 # https://github.com/socketry/async-rspec#async-reactor
 require 'async/io'
 
-RSpec.describe Async::IO do
+RSpec.describe Async::IO, timeout: 15 do
   include_context Async::RSpec::Reactor
 
   let(:pipe) { IO.pipe }
