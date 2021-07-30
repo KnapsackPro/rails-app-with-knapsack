@@ -35,6 +35,9 @@ gem 'jbuilder', '~> 2.0'
 # Access an IRB console on exception pages or by using <%= console %> in views
 gem 'web-console', '~> 2.0', group: :development
 
+gem 'async'
+gem 'async-io'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -50,6 +53,8 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'rails-controller-testing'
+
+  gem 'async-rspec'
 
   gem 'cucumber-rails', :require => false
   # database_cleaner is not required, but highly recommended
