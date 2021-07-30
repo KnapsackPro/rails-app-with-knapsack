@@ -37,6 +37,7 @@ gem 'web-console', '~> 2.0', group: :development
 
 gem 'async'
 gem 'async-io'
+gem 'async-rspec'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -48,8 +49,6 @@ group :development, :test do
   gem 'spring'
 
   gem 'knapsack', path: ENV['KNAPSACK_REPO_PATH'] || '~/Documents/github/knapsack-pro/knapsack'
-
-  gem 'async-rspec'
 end
 
 group :test do
