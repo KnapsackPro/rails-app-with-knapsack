@@ -37,7 +37,6 @@ gem 'web-console', '~> 2.0', group: :development
 
 gem 'async'
 gem 'async-io'
-gem 'async-rspec', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -54,6 +53,7 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'rails-controller-testing'
+  gem 'async-rspec', require: false
 
   gem 'cucumber-rails', :require => false
   # database_cleaner is not required, but highly recommended
