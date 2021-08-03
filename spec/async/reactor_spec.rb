@@ -10,7 +10,7 @@ RSpec.describe Async::IO, timeout: 5 do
 
   it "should send and receive data within the same reactor" do
     # comment out below code because it makes tests fail. I'm not sure why.
-    # just empty test case is enough to validate the knapsack gem tracks time execution correctly for rspec-async gem
+    # just empty test case is enough to validate the knapsack gem tracks time execution correctly for async-rspec gem
 
     #message = nil
 
