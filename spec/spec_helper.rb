@@ -1,3 +1,5 @@
+require 'async/rspec'
+
 require 'knapsack'
 
 # CUSTOM_CONFIG_GOES_HERE
