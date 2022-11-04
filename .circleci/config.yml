@@ -52,7 +52,7 @@ jobs:
       - run: bundle exec rake knapsack:cucumber
 
       #- run: KNAPSACK_GENERATE_REPORT=true bundle exec rake knapsack:minitest
-      - run: bundle exec rake knapsack:minitest[--verbose]
+      - run: bundle exec rake "knapsack:minitest[--verbose]"
 
       #- run: KNAPSACK_GENERATE_REPORT=true bundle exec spinach -f spinach_features
       - run: KNAPSACK_TEST_FILE_PATTERN="spinach_features/**{,/*/**}/*.feature" bundle exec rake knapsack:spinach
