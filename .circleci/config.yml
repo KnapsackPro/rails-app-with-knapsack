@@ -9,7 +9,7 @@ jobs:
     docker:
       # specify the version you desire here
       # https://circleci.com/developer/images/image/cimg/ruby
-      - image: cimg/ruby:3.2.1-browsers
+      - image: cimg/ruby:3.2.2-browsers
         environment:
           RAILS_ENV: test
           KNAPSACK_REPO_PATH: ~/gems/knapsack
